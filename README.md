@@ -25,4 +25,25 @@ A simple Flask-based web application that allows users to input ingredients (com
 ```bash
 git clone https://github.com/your-username/recipe-generator.git
 cd recipe-generator
+```
+
+---
+
+## Some Commands
+
+### Create Image
+```bash
+docker build -t recipe_generator .
+```
+
+### Run the Image
+```bash
+docker run -p 5000:5000 recipe_generator
+```
+
+### Check Processes
+```bash
+docker ps -a
+docker ps
+```
 
