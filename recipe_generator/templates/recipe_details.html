@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ recipe.title }}</title>
+</head>
+<body>
+    <h1>{{ recipe.title }}</h1>
+    <img src="{{ recipe.image }}" alt="{{ recipe.title }}" width="300">
+    
+    <h3>Preparation Time:</h3>
+    <p>{{ recipe.readyInMinutes }} minutes</p>
+    
+    <h3>Ingredients:</h3>
+    <ul>
+        {% for ingredient in recipe.extendedIngredients %}
+            <li>{{ ingredient.original }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Instructions:</h3>
+{% if recipe['instructions'] %}
+    <div>
+        {% if '<li>' in recipe['instructions'] %} 
+            <!-- Render HTML instructions as-is -->
+            {{ recipe['instructions'] | safe }}
+        {% else %}
+            <!-- Format plain text instructions -->
+            <p>{{ recipe['instructions'].replace('. ', '.<br>') | safe }}</p>
+        {% endif %}
+    </div>
+{% else %}
+    <p>No instructions available for this recipe.</p>
+{% endif %}

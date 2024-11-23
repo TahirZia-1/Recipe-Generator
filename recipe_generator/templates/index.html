@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Recipe Generator</title>
+</head>
+<body>
+    <h1>Personalized Recipe Generator</h1>
+    <form action="/generate" method="POST">
+        <label for="ingredients">Enter ingredients (comma-separated): </label>
+        <input type="text" name="ingredients" id="ingredients" required>
+        <button type="submit">Generate Recipes</button>
+    </form>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    {% if recipes %}
+        <h2>Generated Recipes</h2>
+        <ul>
+        {% for recipe in recipes %}
+            <li>
+                <h3>{{ recipe['title'] }}</h3>
+                <img src="{{ recipe['image'] }}" alt="{{ recipe['title'] }}" width="200">
+                <a href="{{ url_for('view_recipe', recipe_id=recipe['id']) }}">View Recipe Details</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

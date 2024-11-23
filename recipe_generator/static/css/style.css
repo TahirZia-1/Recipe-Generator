@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/background.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    color: #fff; /* Light text color for better contrast */
+    position: relative; /* Needed for overlay */
+}
+
+/* Overlay for improved text readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+h1, h2, h3 {
+    color: #f4f4f4; /* Light text color to contrast against darkened background */
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    text-align: center
+}
+
+/* Style for form labels */
+label {
+    color: #333; /* Set to a blue shade for visibility */
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    color: #f4f4f4; /* Light text color for better contrast */
+}
+
+/* Layout */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form button {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px; /* Smaller button size */
+    font-size: 14px; /* Reduced font size */
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Recipes List */
+ul {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for boxes */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: #333; /* Dark text color for better readability inside the box */
+    text-align: center; /* Center-align text for better aesthetics */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Recipe Details */
+div {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text color for better readability */
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+div p {
+    color: #333; /* Lighter color for plain instructions */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1, h2, h3, p, form, ul, li {
+        padding: 10px;
+    }
+}
