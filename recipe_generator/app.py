@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = 'b231584e4a5b4971b5b6670b85dff569'
+API_KEY = 'Get your API key from https://spoonacular.com/food-api'
 API_URL = 'https://api.spoonacular.com/recipes/findByIngredients'
 DETAILS_API_URL = 'https://api.spoonacular.com/recipes/{}/information'  # For detailed recipe info
 
