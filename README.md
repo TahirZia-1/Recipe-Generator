@@ -15,6 +15,6 @@ docker ps
 The ps -a command gives list of all the containers, the ps gives all the containers that are running.
 
 4. You can also delete containers using this command:
-docker rm <container name or id>
+docker rm container name or id
 
 
