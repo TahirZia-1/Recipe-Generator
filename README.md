@@ -19,16 +19,6 @@ A simple Flask-based web application that allows users to input ingredients (com
 
 ---
 
-## Setup Instructions
-
-### Clone the Repository
-```bash
-git clone https://github.com/your-username/recipe-generator.git
-cd recipe-generator
-```
-
----
-
 ## Some Commands
 
 ### Create Image
