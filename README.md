@@ -31,7 +31,7 @@ docker build -t recipe_generator .
 docker run -p 5000:5000 recipe_generator
 ```
 
-### Check Processes
+### Check Containers
 ```bash
 docker ps -a
 docker ps
