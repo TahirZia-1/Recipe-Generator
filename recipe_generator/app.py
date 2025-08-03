@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = 'Get your API key from https://spoonacular.com/food-api'
+API_KEY = '334a795cb7074feaba47f0d1645371c5' # You can get your own API key from https://spoonacular.com/food-api
 API_URL = 'https://api.spoonacular.com/recipes/findByIngredients'
 DETAILS_API_URL = 'https://api.spoonacular.com/recipes/{}/information'  # For detailed recipe info
 
@@ -58,3 +58,4 @@ def view_recipe(recipe_id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
